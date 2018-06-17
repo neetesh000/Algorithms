@@ -1,6 +1,6 @@
-package sort;
+package neetesh.algorithms.sort;
 
-import utils.Utilities;
+import neetesh.algorithms.utils.Utilities;
 
 public class ShellShort {
 

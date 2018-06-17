@@ -1,6 +1,6 @@
-package sort;
+package neetesh.algorithms.sort;
 
-import utils.Utilities;
+import neetesh.algorithms.utils.Utilities;
 
 public class MergeSort {
 
@@ -46,10 +46,9 @@ public class MergeSort {
 	public static void invertedSort(Object[] array) {
 		Object[] newArray = new Object[array.length];
 		invertedSort(array, newArray, 0, array.length - 1);
-
 	}
 
-	public static void invertedSort(Object[] array, Object[] newArray, int hi, int lo) {
+	public static void invertedSort(Object[] array, Object[] newArray, int lo, int hi) {
 		if (hi <= lo) {
 			return;
 		}
@@ -80,13 +79,6 @@ public class MergeSort {
 			}
 		}
 		
-	}
-	
-	public static void main(String[] args) {
-		Integer[] array = { 20, 16, 16, 15, 13, 2 };
-		invertedSort(array);
-
-		System.out.println(Utilities.arrayAsString(array));
 	}
 
 }

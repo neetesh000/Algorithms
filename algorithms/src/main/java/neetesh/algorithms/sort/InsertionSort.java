@@ -1,6 +1,6 @@
-package sort;
+package neetesh.algorithms.sort;
 
-import utils.Utilities;
+import neetesh.algorithms.utils.Utilities;
 
 public class InsertionSort {
 
@@ -9,7 +9,7 @@ public class InsertionSort {
 		for (int i = lo; i <= hi; i++) {
 			for (int j = i; j > lo; j--) {
 				if (Utilities.compare(array, j, j - 1) < 0) {
-					Utilities.swap(array, i, j);
+					Utilities.swap(array, j, j-1);
 				} else {
 					break;
 				}
@@ -32,8 +32,8 @@ public class InsertionSort {
 
 		for (int i = hi; i >= lo; i--) {
 			for (int j = i; j < hi; j++) {
-				if (Utilities.compare(array, j, j + 1) > 0) {
-					Utilities.swap(array, i, j);
+				if (Utilities.compare(array, j, j + 1) < 0) {
+					Utilities.swap(array, j, j+1);
 				} else {
 					break;
 				}

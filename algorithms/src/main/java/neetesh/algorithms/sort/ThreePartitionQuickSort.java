@@ -1,6 +1,6 @@
-package sort;
+package neetesh.algorithms.sort;
 
-import utils.Utilities;
+import neetesh.algorithms.utils.Utilities;
 
 public class ThreePartitionQuickSort {
 
@@ -72,14 +72,6 @@ public class ThreePartitionQuickSort {
 		invertedSort(in, lo, gt - 1);
 		invertedSort(in, lt + 1, hi);
 
-	}
-
-	public static void main(String[] args) {
-		Integer[] array = { 1, 8, 5, 40, 8, 2, 6, 324, 6, 23, 534, 5 };
-
-		sort(array);
-
-		System.out.println(Utilities.arrayAsString(array));
 	}
 
 }

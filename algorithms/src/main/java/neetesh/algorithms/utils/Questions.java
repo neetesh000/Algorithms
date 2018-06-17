@@ -1,6 +1,6 @@
-package utils;
+package neetesh.algorithms.utils;
 
-import sort.QuickSort;
+import neetesh.algorithms.sort.QuickSort;
 
 public class Questions {
 

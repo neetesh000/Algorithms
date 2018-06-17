@@ -1,4 +1,4 @@
-package utils;
+package neetesh.algorithms.utils;
 
 import java.util.Random;
 
@@ -15,9 +15,9 @@ public class Utilities {
 		T t1 = array[i];
 		T t2 = array[j];
 
-		return compare(t1,t2);
+		return compare(t1, t2);
 	}
-	
+
 	public static <T> int compare(T t1, T t2) {
 
 		if (t1.equals(t2)) {
@@ -25,9 +25,9 @@ public class Utilities {
 		} else {
 			return t1.hashCode() - t2.hashCode();
 		}
-		
+
 	}
-	
+
 	public static <T> void randomize(T[] array) {
 
 		Random rand = new Random();
@@ -39,19 +39,19 @@ public class Utilities {
 	}
 
 	public static <T> String arrayAsString(T[] array) {
-		
+
 		StringBuffer buf = new StringBuffer();
-		
+
 		buf.append('[').append(' ');
-		
-		for(T t : array) {
+
+		for (T t : array) {
 			buf.append(t).append(',').append(' ');
 		}
-		
-		return buf.replace(buf.length()-2, buf.length()-1, " ]").toString();
-		
+
+		return buf.replace(buf.length() - 2, buf.length() - 1, " ]").toString();
+
 	}
-	
+
 	public static <T> boolean isSorted(T[] array, int lo, int hi) {
 
 		for (int i = lo; i < hi - 1; i++) {
@@ -63,7 +63,15 @@ public class Utilities {
 		}
 		return true;
 	}
-	
+
+	public static <T> boolean isSorted(T[] array) {
+
+		int lo = 0, hi = array.length - 1;
+
+		return isSorted(array, lo, hi);
+
+	}
+
 	public static <T> boolean isInvertedSorted(T[] array, int lo, int hi) {
 
 		for (int i = lo; i < hi - 1; i++) {
@@ -74,6 +82,14 @@ public class Utilities {
 
 		}
 		return true;
+	}
+
+	public static <T> boolean isInvertedSorted(T[] array) {
+
+		int lo = 0, hi = array.length - 1;
+
+		return isInvertedSorted(array, lo, hi);
+
 	}
 
 }
